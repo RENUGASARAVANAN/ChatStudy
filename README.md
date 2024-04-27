@@ -77,8 +77,8 @@ Client-server chat applications are foundational to real-time communication over
  DEVELOPED BY:S.RENUGA
  REG NO:212222230118
 
- # Client:
- ```
+ ## CLIENT:
+```
 import socket
 s=socket.socket()
 s.bind(('localhost',8000))
@@ -91,15 +91,14 @@ st=0
 i=0
 while True:
  while(i<len(l)):
- st+=s
- c.send(str(l[i:st]).encode())
- ack=c.recv(1024).decode()
- if ack:
- print(ack)
- i+=s
+       st+=s
+       c.send(str(l[i:st]).encode())
+       ack=c.recv(1024).decode()
+       if ack:
+           print(ack)
+           i+=s
 ```
-
-# Server:
+## SERVER:
 ```
 import socket
 s=socket.socket()
@@ -108,12 +107,11 @@ while True:
  print(s.recv(1024).decode())
  s.send("acknowledgement recived from the server".encode())
 ```
-# Output:
-# Client:
-![Screenshot 2024-04-16 211237](https://github.com/RENUGASARAVANAN/ChatStudy/assets/119292258/38ccd9aa-e24c-4f88-a70d-7cb8230b3ce9)
-
-# Server:
-![Screenshot 2024-04-16 211255](https://github.com/RENUGASARAVANAN/ChatStudy/assets/119292258/b83c5fa1-a1a1-4266-b346-8d7a0750b33e)
+## OUTPUT:
+## CLIENT:
+![image](https://github.com/Dharanya2005/ChatStudy/assets/145742468/ce658953-a901-45cb-839f-b5c023b6d03f)
+## SEVER:
+![image](https://github.com/Dharanya2005/ChatStudy/assets/145742468/53ec8eec-3ae2-48b8-a9b9-eb645d36f998)
 
 
 ## Result:
